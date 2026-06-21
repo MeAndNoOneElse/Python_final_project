@@ -11,3 +11,4 @@ class GroupMember(Base):
     group_id = Column(Integer, ForeignKey("groups.id"))
     role = Column(String, default="member")
     joined_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+# DB: group_member
