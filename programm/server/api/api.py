@@ -11,3 +11,4 @@ api_router.include_router(expenses.router, prefix="/api/expenses", tags=["expens
 api_router.include_router(debts.router, prefix="/api/debts", tags=["debts"])
 api_router.include_router(confirmations.router, prefix="/api/confirmations", tags=["confirmations"])
 api_router.include_router(stats.router, prefix="/api/stats", tags=["stats"])
+# API router
