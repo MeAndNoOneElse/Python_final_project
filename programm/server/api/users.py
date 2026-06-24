@@ -40,3 +40,4 @@ def update_me(
     """Update user settings"""
     return UserService(db).update_settings(telegram_id=telegram_id, payload=payload)
 
+# Users API
