@@ -39,3 +39,4 @@ def delete_storage(storage_id: int, db: Session = Depends(get_db)):
 def list_storage_inventory(storage_id: int, db: Session = Depends(get_db)):
     return InventoryService(db).list_storage_inventory(storage_id)
 
+# Storage
