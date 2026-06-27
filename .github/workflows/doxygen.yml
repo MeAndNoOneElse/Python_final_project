@@ -1,0 +1,30 @@
+name: Documentation (Doxygen)
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  generate_pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Doxygen
+        run: sudo apt-get install -y doxygen
+
+      - name: Generate documentation
+        run: doxygen Doxyfile
+
+      - name: Deploy to GitHub Pages
+        uses: jamesgeorge007/github-pages-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          server: github
+          add_to_index: false
+          keep_files: false
+          master_branch: gh-pages
+          cname: docs.splitchek.localhost.com
