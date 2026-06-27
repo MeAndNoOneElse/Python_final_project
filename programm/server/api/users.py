@@ -1,3 +1,14 @@
+"""
+Users API module for SplitChek.
+
+This module provides REST API endpoints for user management including:
+- Getting current user profile
+- Creating/updating users
+- Updating user settings
+
+Author: andrey
+"""
+
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
