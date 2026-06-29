@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-telegram-bot
+sqlalchemy
+pydantic
+pydantic-settings # Добавлено для BaseSettings
+python-dotenv
+requests
+# Для работы с БД PostgreSQL в будущем
+psycopg2-binary
